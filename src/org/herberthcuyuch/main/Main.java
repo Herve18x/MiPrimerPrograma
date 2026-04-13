@@ -31,10 +31,16 @@ public class Main {
                 System.out.println("no se ha configurado la opcion, vuelve a ingresar un valor.");
                 break;
             case 3:
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
                 ControllerLogica logica = new ControllerLogica();
 
-                int opcionLogica = logica.menuOpciones(); 
+                int opcionLogica = -1;
+                while (opcionLogica != 0) {
 
+<<<<<<< Updated upstream
                 switch (opcionLogica) {
                     case 1:
                         logica.verificarEdad();
@@ -43,11 +49,45 @@ public class Main {
                     case 0:
                         System.out.println("Saliendo del menú de lógica");
                         break;
+=======
+                    opcionLogica = logica.menuOpciones();
+>>>>>>> Stashed changes
 
-                    default:
-                        System.out.println("Opción no válida");
+                    switch (opcionLogica) {
+                        case 1:
+                            logica.verificarEdad();
+                            break;
+                        case 2:
+                            logica.parImpar();
+                            break;
+                        case 3:
+                            logica.semaforo();
+                            break;
+                        case 4:
+                            logica.loginSimple();
+                            break;
+                        case 5:
+                            logica.mayorDeDos();
+                            break;
+                        case 6:
+                            logica.añoBisiesto();
+                            break;
+                        case 7:
+                            logica.triangulo();
+                            break;
+                        case 8:
+                            logica.comparadorTexto();
+                            break;
+                        case 0:
+                            System.out.println("Saliendo del menú de lógica");
+                            break;
+                        default:
+                            System.out.println("Opción no válida");
+                    }
                 }
                 break;
+
+
 
             case 4: 
                 System.out.println("no se ha configurado la opcion, vuelve a ingresar un valor.");
