@@ -42,4 +42,22 @@ public class ControllerLogica {
             return false;
         }
     }
+    public boolean parImpar(){
+    
+        Scanner leer = new Scanner(System.in);
+        
+        System.out.println("Ingrese un numero:");
+        int n1 = leer.nextInt();
+        
+        n1 = (n1 % 2);
+        if (n1 == 0){
+         System.out.println(n1 + " es par.");
+         return true; 
+        }else{
+         System.out.println(n1 + " es impar.");
+         return false;
+        }
+        
+        
+    }
 }
