@@ -83,8 +83,52 @@ public class ControllerLogica {
         }
     }
     public boolean loginSimple(){
-        Scanner leer = new SCanner (System.in);
+        Scanner leer = new Scanner (System.in);
+        
+        System.out.println("Ingrese el usuario.");
+        String usuario = leer.nextLine();
+        if (usuario.equalsIgnoreCase("Admin")){
+            System.out.println("Ingrese una contraseña.");
+            String password = leer.nextLine();
+            if (password.equalsIgnoreCase("1234")){
+                System.out.println("Bienvenido.");
+                return true;
+            }
+            
+        }else {
+         System.out.println("Usuario incorrecto, acceso denegado.");
+         return false;
+        }
+           
+    }
+    public boolean mayorDeDos(){
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese dos numeros.");
+        int n1 = leer.nextInt();
+        int n2 = leer.nextInt();
+        if (n1 > n2){
+            System.out.println(n1 + " es mayor.");
+        }else{
+            if (n2 > n1){
+                System.out.println(n2 + " es mayor.");
+                
+            }else {
+                System.out.println("Ambos son iguales.");
+            }
+               
+        }
+        
+            
+    }
+    
+    public boolean añoBisiesto(){
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese el año.");
+        int year = leer.nextInt();
+        
+        
         
         
     }
+    
 }
