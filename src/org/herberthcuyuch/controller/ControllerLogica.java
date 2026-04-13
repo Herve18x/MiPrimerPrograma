@@ -10,16 +10,13 @@ public class ControllerLogica {
         System.out.println("=========================");
         System.out.println("MENU LOGICA.");
         System.out.println("1. Verificador de edad.");
-        System.out.println("2.");
-        System.out.println("3.");
-        System.out.println("4.");
-        System.out.println("5.");
-        System.out.println("6.");
-        System.out.println("7.");
-        System.out.println("8.");
-        System.out.println("9.");
-        System.out.println("10.");
-        System.out.println("11.");
+        System.out.println("2. Numeros pares e impares.");
+        System.out.println("3. Semaforo.");
+        System.out.println("4. Login Simple.");
+        System.out.println("5. Mayor de dos.");
+        System.out.println("6. Año bisiesto.");
+        System.out.println("7. Triangulo.");
+        System.out.println("8. Comparador de textos.");
         System.out.println("0. Salir del sistema.");
         System.out.println("=========================");
         System.out.println("Ingrese una opcion.");
@@ -96,27 +93,29 @@ public class ControllerLogica {
             }
             
         }else {
-         System.out.println("Usuario incorrecto, acceso denegado.");
-         return false;
+            System.out.println("Usuario incorrecto, acceso denegado.");
+            
         }
+        return false;
            
     }
+
     public boolean mayorDeDos(){
-        Scanner leer = new Scanner(System.in);
-        System.out.println("Ingrese dos numeros.");
-        int n1 = leer.nextInt();
-        int n2 = leer.nextInt();
-        if (n1 > n2){
-            System.out.println(n1 + " es mayor.");
-            return true;
-        }else{
-            if (n2 > n1){
-                System.out.println(n2 + " es mayor.");
+            Scanner leer = new Scanner(System.in);
+            System.out.println("Ingrese dos numeros.");
+            int n1 = leer.nextInt();
+            int n2 = leer.nextInt();
+            if (n1 > n2){
+                System.out.println(n1 + " es mayor.");
                 return true;
+            }else{
+                if (n2 > n1){
+                    System.out.println(n2 + " es mayor.");
+                    return true;
                 
-            }else {
-                System.out.println("Ambos son iguales.");
-                return true; 
+                }else {
+                    System.out.println("Ambos son iguales.");
+                    return true; 
             }
                
         }
@@ -139,7 +138,7 @@ public class ControllerLogica {
       
         if (div4 == 0 && div100 != 0) {
             esBisiesto = true;
-        } else if (div400 == 0) {
+        } else if(div400 == 0) {
             esBisiesto = true;
         } else {
             esBisiesto = false;
@@ -149,6 +148,25 @@ public class ControllerLogica {
     }   
 
     public boolean triangulo(){
+        
+        
+    }
+    
+    public boolean comparadorTexto() {
+        System.out.println("Ingrese dos palabras para comprobar si son iguales.");
+        Scanner leer = new Scanner(System.in);
+        String texto1 = leer.nextLine();
+        String texto2 = leer.nextLine();
+        
+        if (texto1.equalsIgnoreCase(texto2)){
+            System.out.println("Ambos textos son iguales.");
+            return true;
+        }else{
+            System.out.println("No son iguales.");
+            return false; 
+        }
+        
+            
         
         
     }
