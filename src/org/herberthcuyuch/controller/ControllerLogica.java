@@ -57,6 +57,33 @@ public class ControllerLogica {
          System.out.println(n1 + " es impar.");
          return false;
         }
+    }
+    public boolean semaforo() {
+
+        Scanner leer = new Scanner(System.in);
+
+        System.out.println("Ingrese el color del semáforo:");
+        String color = leer.nextLine(); 
+
+        if (color.equalsIgnoreCase("verde")) {
+            System.out.println("Puede continuar");
+            return true;
+
+        } else if (color.equalsIgnoreCase("amarillo")) {
+            System.out.println("Precaución");
+            return false;
+
+        } else if (color.equalsIgnoreCase("rojo")) {
+            System.out.println("Alto");
+            return false;
+
+        } else {
+            System.out.println("Color no válido");
+            return false;
+        }
+    }
+    public boolean loginSimple(){
+        Scanner leer = new SCanner (System.in);
         
         
     }
