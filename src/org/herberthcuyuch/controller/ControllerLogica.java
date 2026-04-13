@@ -1,19 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package org.herberthcuyuch.controller;
+
 import java.util.Scanner;
 
-/**
- *
- * @author informatica
- */
-public class ControllerLogica {    
-    
-    public void menuOpciones(int opcion) {
+public class ControllerLogica {
+
+    public int menuOpciones() {
         Scanner leer = new Scanner(System.in);
-        System.out.println("1.Verificador de edad.");
+
+        System.out.println("=========================");
+        System.out.println("MENU LOGICA.");
+        System.out.println("1. Verificador de edad.");
         System.out.println("2.");
         System.out.println("3.");
         System.out.println("4.");
@@ -25,44 +21,25 @@ public class ControllerLogica {
         System.out.println("10.");
         System.out.println("11.");
         System.out.println("0. Salir del sistema.");
+        System.out.println("=========================");
         System.out.println("Ingrese una opcion.");
+
         int opcionLogica = leer.nextInt();
+        return opcionLogica;
     }
-    
-    switch(menuOpciones){
-        case 1:
-            verificarEdad()
-        case 2:
-    
-    
-    
-    
-    }
-            
-            
-            
-            
-            
-            
-    
-    public boolean verificarEdad(int edad){
-        System.out.println("Ingrese una edad.");
-        edad = leer.nextInt();
-        boolean mayorEdad = false;
 
-        if (edad >= 18){ 
+    public boolean verificarEdad() {
+        Scanner leer = new Scanner(System.in);
 
-            mayorEdad = true;
+        System.out.print("Ingrese una edad: ");
+        int edad = leer.nextInt();
 
-        }else{
-
-            mayorEdad = false;
-
+        if (edad >= 18) {
+            System.out.println("Es mayor de edad");
+            return true;
+        } else {
+            System.out.println("Es menor de edad");
+            return false;
         }
-
-        return mayorEdad;
-
     }
- 
 }
-

@@ -32,8 +32,23 @@ public class Main {
                 break;
             case 3:
                 ControllerLogica logica = new ControllerLogica();
-                logica.menuOpciones(opcion);
+
+                int opcionLogica = logica.menuOpciones(); 
+
+                switch (opcionLogica) {
+                    case 1:
+                        logica.verificarEdad();
+                        break;
+
+                    case 0:
+                        System.out.println("Saliendo del menú de lógica");
+                        break;
+
+                    default:
+                        System.out.println("Opción no válida");
+                }
                 break;
+
             case 4: 
                 System.out.println("no se ha configurado la opcion, vuelve a ingresar un valor.");
                 break;
