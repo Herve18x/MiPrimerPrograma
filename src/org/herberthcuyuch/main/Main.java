@@ -4,6 +4,8 @@
  */
 package org.herberthcuyuch.main;
 import org.herberthcuyuch.view.ViewMenuPrincipal;
+import org.herberthcuyuch.controller.ControllerLogica;
+
 /**
  *
  * @author Herberth Cuyuch
@@ -19,6 +21,22 @@ public class Main {
         ViewMenuPrincipal menu = new ViewMenuPrincipal();
         menu.mostrarMenu();
        
-    }
-    
+        int opcion = menu.getOpcionMenu();
+        
+        switch(opcion){
+            case 1:
+                System.out.println("no se ha configurado la opcion, vuelve a ingresar un valor.");
+                break; 
+            case 2:
+                System.out.println("no se ha configurado la opcion, vuelve a ingresar un valor.");
+                break;
+            case 3:
+                ControllerLogica logica = new ControllerLogica();
+                logica.menuOpciones(opcion);
+                break;
+            case 4: 
+                System.out.println("no se ha configurado la opcion, vuelve a ingresar un valor.");
+                break;
+        }
+    } 
 }

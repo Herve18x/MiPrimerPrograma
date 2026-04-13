@@ -31,6 +31,10 @@ public class ViewMenuPrincipal {
         System.out.println("Menu de operaciones matematicas.");        
         
     }    
+    public int getOpcionMenu(){
+        return opcionMenu;
+        
+    }
 }
     
     
