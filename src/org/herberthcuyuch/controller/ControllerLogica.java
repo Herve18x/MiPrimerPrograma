@@ -108,27 +108,53 @@ public class ControllerLogica {
         int n2 = leer.nextInt();
         if (n1 > n2){
             System.out.println(n1 + " es mayor.");
+            return true;
         }else{
             if (n2 > n1){
                 System.out.println(n2 + " es mayor.");
+                return true;
                 
             }else {
                 System.out.println("Ambos son iguales.");
+                return true; 
             }
                
         }
         
             
     }
-    
-    public boolean añoBisiesto(){
+    public boolean añoBisiesto() {
+
         Scanner leer = new Scanner(System.in);
-        System.out.println("Ingrese el año.");
+        System.out.println("Ingrese el año:");
         int year = leer.nextInt();
-        
-        
+
+   
+        int div4 = year % 4;
+        int div100 = year % 100;
+        int div400 = year % 400;
+
+        boolean esBisiesto;
+
+      
+        if (div4 == 0 && div100 != 0) {
+            esBisiesto = true;
+        } else if (div400 == 0) {
+            esBisiesto = true;
+        } else {
+            esBisiesto = false;
+        }
+
+        return esBisiesto;
+    }   
+
+    public boolean triangulo(){
         
         
     }
     
-}
+}    
+        
+    
+    
+
