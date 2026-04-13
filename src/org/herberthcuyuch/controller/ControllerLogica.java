@@ -13,7 +13,7 @@ public class ControllerLogica {
     
     public void menuOpciones(int opcion) {
         Scanner leer = new Scanner(System.in);
-        System.out.println("1.");
+        System.out.println("1.Verificador de edad.");
         System.out.println("2.");
         System.out.println("3.");
         System.out.println("4.");
@@ -46,6 +46,7 @@ public class ControllerLogica {
             
     
     public boolean verificarEdad(int edad){
+        System.out.println("Ingrese una edad.");
         edad = leer.nextInt();
         boolean mayorEdad = false;
 
